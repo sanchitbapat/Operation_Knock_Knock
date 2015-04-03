@@ -1,0 +1,17 @@
+
+Operation Knock Knock
+
+
+A simple blog/guestbook application that can turn into a secret communication application
+ whenever the user performs a set of actions (knock sequence).
+
+Steps for secret communication:
+1. Create a new user.
+2. Calculate the MD5 of the username and convert it to hexadecimal.
+3. The first 4 digits of the above value modulo 4 will serve as the knock sequence.
+4. Use the following pages to execute the knock sequence:
+	0 : /user/register
+	1 : /user/login
+	2 : /message/add
+	3 : /message/list
+5. After successful execution of the knock sequence the users can communicate in secret.

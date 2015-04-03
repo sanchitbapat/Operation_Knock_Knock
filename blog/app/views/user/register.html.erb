@@ -1,0 +1,11 @@
+<h1>Register
+<br><%= session[:flag] %></h1>
+<br>
+<%= flash[:r] %>
+<br>
+<form id="register" name="register" method="POST" action="create">
+Username<br><input type="text" name="username"/><br>
+Password<br><input type="password" name="password"/><br>
+Confirm Password<br><input type="password" name="password_confirm"/><br>
+<input type="submit" name="submit" value="submit"/><br>
+</form>

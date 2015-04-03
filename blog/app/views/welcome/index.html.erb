@@ -1,0 +1,11 @@
+<h1>Welcome!</h1>
+<% if session[:userid] %>
+<a href="message/add">Add Message</a>
+<a href="message/list">List Messages</a>
+<a href="user/logout">Logout</a>
+<br></br>
+<% else %>
+<a href="user/register">Register</a>
+<a href="user/login">Login</a>
+<% end %>
+<%= flash[:h] %>

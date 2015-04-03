@@ -1,0 +1,18 @@
+<h1>Add Message<br>
+<%= session[:flag] %>
+</h1>
+<%= flash[:r] %>
+<br>
+<% if session[:userid] %>
+<a href="add">Add Message</a>
+<a href="list">List Messages</a>
+<a href="/user/logout">Logout</a>
+<br>
+<form name="create-message" action="add_message" method="POST">
+Title<br><input type="text" name="title"/><br>
+Message<br><textarea name="message" rows="5" cols="10"></textarea><br>
+<input type="submit" name="submit" value="submit"/><br>
+</form>
+<% else %>
+<h1>Please Login</h1>
+<% end %>

@@ -1,0 +1,27 @@
+<h1>Message List
+<br><%= session[:flag] %>
+</h1>
+<% if session[:userid] %>
+<a href="add">Add Message</a>
+<a href="list">List Messages</a>
+<a href="/user/logout">Logout</a>
+<br>
+<!--<%= for i in 1..Messages.maximum("id") do %>-->
+<!--<%= @messages = Messages.find_by_id(i) %>-->
+<div class="message">
+<% if @messages.secret === 1 && session[:flag] === 5 %>
+<%= @messages.title %>
+<br>
+<%= @messages.message %>
+<br>
+<% elsif @messages.secret != 1 && session[:flag] != 5 %>
+<%= @messages.title %>
+<br>
+<%= @messages.message %>
+<br>
+<% end %>
+</div>
+<!--<% end %>-->
+<% else %>
+<h1>Please Login</h1>
+<% end %>
